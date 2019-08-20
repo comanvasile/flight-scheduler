@@ -1,0 +1,13 @@
+.h2-head{
+    float:left;
+    margin-left:3%;
+    color:#002769;
+    font-weight: 300;
+  }
+    
+  .add-head {
+       display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+  }

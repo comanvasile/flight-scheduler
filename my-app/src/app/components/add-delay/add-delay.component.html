@@ -1,0 +1,17 @@
+<div id="maindiv">
+  <h1 mat-dialog-title class="addReason" id="header">Add Delay</h1>
+  <div mat-dialog-content class="addReason"  >
+   <form [formGroup]="addDelayFormGroup">
+    <div class="24hr-example">
+      <mat-icon matPrefix>watch_later</mat-icon>
+    <input  placeholder="24hr format" aria-label="24hr format" [ngxTimepicker]="fullTime1" [format]="24"  readonly formControlName="delayControl">
+    <ngx-material-timepicker #fullTime1></ngx-material-timepicker>
+</div> 
+    
+  </form>
+  </div>
+  <div mat-dialog-actions class="addReason" id="buttons" >
+    <button mat-button class="matButton" id="cancel" (click)="onNoClick()">Cancel</button>
+    <button mat-button class="matButton" id="addReasonButton" [mat-dialog-close] (click)="save()" [disabled]="(!addDelayFormGroup.valid)">Add</button>
+  </div>
+  </div>

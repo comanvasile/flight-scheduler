@@ -1,0 +1,117 @@
+
+.body{
+    #title{
+      color:white;
+      font-size: 36px;
+      display: flex;
+      justify-content: center;
+      margin-top: 150px;
+      margin-bottom: auto;
+   }
+   #subtitle{
+     color:white;
+     display: flex;
+     justify-content: center;
+     font-size: smaller;
+     margin-bottom: 50px;
+    }
+  .login-card{   
+    display: flex;
+    justify-content: center;
+    .mat-card{
+        min-width: 25%;
+        max-width: 30%;
+        height: 280px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    .errorText{
+        color:red;
+        text-align: center;
+        font-size: small;
+        margin-bottom: 10px;
+    }
+    .mat-card-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: inherit;
+    }
+    .mat-card-title{
+        font-size: larger;
+        color: #002769;
+    }
+    .mat-button{
+        width: 100%;
+    }
+    .mat-input-element{
+        margin-bottom: 5px;
+    }
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5%;
+        width: 280px;
+        .field{
+            width: 70%;
+            min-width: 50%;
+        } 
+        .label{
+            margin-left: 5px;
+        }
+       
+    }
+
+    .button{
+        align-items: center;
+         display: flex;
+         flex-direction: column;
+          width: 80%;
+    background-color: #EB008B;
+    color:white;
+    border-radius: 4px;
+    }
+    
+    .mat-button[disabled][disabled]{
+        color: #002769;
+        background-color: #fafafa;
+    }
+    
+    
+    
+}
+.create-account{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: smaller;
+    margin-top: 20px;
+    text-decoration: none;
+}
+#background {
+    
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+  
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+
+  }
+}
+input.mat-input-element{
+    padding-left: 10px;
+}
+
+
+
+
+
+

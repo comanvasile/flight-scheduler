@@ -1,0 +1,80 @@
+.card-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+.btn-head{
+   float:right;
+   margin-right: 3%;
+   background-color: white;
+   border: solid #d9d9d9;
+   margin-top: 10px;
+}
+#buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between
+
+}
+.mat-row:nth-child(even){
+    background-color:white;
+}
+
+.mat-row:nth-child(odd) {
+    background-color:#f2f2f2;
+}
+
+.mainDiv{
+    background-color: #fafafa;
+}
+
+
+
+.programari-table {
+    padding-left: 3%;
+    padding-right: 3%;
+
+    td.mat-cell, td.mat-footer-cell {
+        border: none;
+    }
+    .mat-cell {
+        color: #808080;
+    }
+    
+    .mat-header-row{
+        color:#666666;
+    }
+     th.mat-header-cell {
+     border-bottom: none;
+     font-weight: bold;
+    }
+}
+
+.material-icons{
+    color:#808080;
+}
+.button-text{
+    color: #808080;
+
+}
+
+#btn-remove{
+    margin-left: 10%;
+    color:#EB008B;
+    cursor: pointer;
+}
+
+#btn-edit{
+    margin-left: 10%;
+    color:#EB008B;
+    cursor: pointer;
+}
+td.mat-cell.cdk-column-action.mat-column-action{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}

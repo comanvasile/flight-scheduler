@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//@import '~bootstrap/dist/css/bootstrap.min.css';
+//@import '~open-iconic/font/css/open-iconic-bootstrap.css';
+// @import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+    font-family: 'Open Sans', sans-serif;
+    src:url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+    
+}
+$color-pink:#EB008B;
+
+#button-pink{
+    background-color: $color-pink;
+    color:white; 
+    margin-right: 0%;    
+  }
+  #button-text-blue {	
+    color: #002769;
+    border-style: solid;
+    border-color: #002769;
+    height: 36px;
+  }
+  
+ .h2-head{
+        float: left;
+        margin-left: 3%;
+        color: #002769;
+        margin-bottom: auto;
+        font-weight: 300;
+  }
+.header-blue{
+    background-color: #002769;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    font-size: smaller; 
+    justify-content: space-between;
+    
+}
+.header-title{
+    padding-right: 40%;
+    font-weight: inherit;
+}
+// @media (min-width: 768px) {
+//     width: 50px !important;
+// }

@@ -1,0 +1,73 @@
+<div class="mainDiv">
+    <header class="header">
+      <div class="card-head">
+        <h2 class="h2-head">Flights</h2>
+        <div id="buttons">
+           
+          <button mat-button (click)="logout()">
+            <i class="material-icons">power_settings_new</i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+
+
+  <div>
+    <table mat-table [dataSource]="flightList" class="programari-table" width="100%">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Flight Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="source">
+        <th mat-header-cell *matHeaderCellDef> Source </th>
+        <td mat-cell *matCellDef="let element"> {{element.source}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="departure">
+        <th mat-header-cell *matHeaderCellDef> Departure </th>
+        <td mat-cell *matCellDef="let element"> {{element.departure }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="destination">
+        <th mat-header-cell *matHeaderCellDef> Destination </th>
+        <td mat-cell *matCellDef="let element"> {{element.destination}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="arrival">
+        <th mat-header-cell *matHeaderCellDef> Arrival </th>
+        <td mat-cell *matCellDef="let element"> {{element.arrival }} </td>
+      </ng-container>
+      <ng-container matColumnDef="haltStation">
+        <th mat-header-cell *matHeaderCellDef> Halt Station </th>
+        <td mat-cell *matCellDef="let element"> {{element.haltStation}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="haltDuration">
+        <th mat-header-cell *matHeaderCellDef> Halt Duration </th>
+        <td mat-cell *matCellDef="let element"> {{element.haltDuration }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="airline">
+        <th mat-header-cell *matHeaderCellDef> Airline </th>
+        <td mat-cell *matCellDef="let element"> {{element.airline}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="delay">
+        <th mat-header-cell *matHeaderCellDef> Delay </th>
+        <td mat-cell *matCellDef="let element"> {{element.delay}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <i class="material-icons" id="btn-edit" (click)="addDelay(element)" mat-suffix>add_box</i>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" class="test"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

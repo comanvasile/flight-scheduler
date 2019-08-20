@@ -1,0 +1,107 @@
+
+<header>
+  <app-header [title]="title"></app-header>
+</header>
+<div class="add-programare-Container">
+
+
+  <mat-card>
+      
+    
+  
+      <mat-card-content *ngIf="addForm">
+        <form [formGroup]="addForm" class="addForm">
+          <mat-form-field>
+              <mat-icon matPrefix>search</mat-icon>
+
+            <mat-select placeholder="Select Source Airport" formControlName="sourceControl" (ngModelChange)="changeState($event)">
+              
+              <mat-option *ngFor="let unit of airportList" [value] ="unit.name">
+                {{unit.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field> 
+
+          <div class="24hr-example">
+            <mat-icon matPrefix>watch_later</mat-icon>
+          <input  placeholder="24hr format" aria-label="24hr format" [ngxTimepicker]="fullTime1" [format]="24"  readonly formControlName="departureControl">
+          <ngx-material-timepicker #fullTime1></ngx-material-timepicker>
+     </div> 
+
+          <mat-form-field>
+              <mat-icon matPrefix>search</mat-icon>
+
+            <mat-select placeholder="Select Destination Airport" formControlName="destinationControl" (ngModelChange)="changeState2($event)">
+                
+              <mat-option *ngFor="let airport of airportList1" [value]="airport.name">
+                {{airport.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field> 
+           <div class="24hr-example">
+            <mat-icon matPrefix>watch_later</mat-icon>
+          <input  placeholder="24hr format" aria-label="24hr format" [ngxTimepicker]="fullTime2" [format]="24"  readonly formControlName="arrivalControl">
+          <ngx-material-timepicker #fullTime2></ngx-material-timepicker>
+     </div>  
+          <mat-form-field>
+            <mat-icon matPrefix>search</mat-icon>
+
+          <mat-select placeholder="Select Airline" formControlName="airlineControl">
+              
+            <mat-option *ngFor="let airline of airlineList" [value]="airline.name">
+              {{airline.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field> 
+
+
+        <mat-form-field>
+          <mat-icon matPrefix>search</mat-icon>
+
+        <mat-select placeholder="Select Halt Airport" formControlName="haltStationControl">
+            
+          <mat-option *ngFor="let airline of airportList2" [value]="airline.name">
+            {{airline.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> 
+
+
+
+
+        <div class="24hr-example">
+          <mat-icon matPrefix>watch_later</mat-icon>
+        <input placeholder="24hr format" aria-label="24hr format" [ngxTimepicker]="fullTime3" [format]="24"  readonly formControlName="haltDurationControl">
+        <ngx-material-timepicker #fullTime3></ngx-material-timepicker>
+   </div> 
+        <!-- <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field> -->
+        
+
+          
+        <!-- <div class="24hr-example">
+            <mat-icon matPrefix>watch_later</mat-icon>
+          <input placeholder="24hr format" aria-label="24hr format" [ngxTimepicker]="fullTime" [format]="24"  readonly formControlName="timeControl">
+          <ngx-material-timepicker #fullTime></ngx-material-timepicker>
+     </div>  -->
+        
+
+        
+        </form>
+          
+
+      </mat-card-content>
+  </mat-card>
+  <div class="create-button">
+
+      <mat-card-actions class="createButtonPink" *ngIf="addForm">
+          <button id="button-text-blue" class="createOrCancel" mat-button (click)="cancel()">Cancel</button>
+          <button id="button-pink" class="createOrCancel" mat-button (click)="updateOrAddFlight()" [disabled]="!addForm.valid">{{buttonTitle}}</button>
+      </mat-card-actions>
+
+  </div>
+
+</div>
